@@ -38,42 +38,47 @@ let firstPrice = (km * 0.21);
 
 let finalPrice;
 
-if (age < 18) {
-
-    finalPrice = ((firstPrice / 100) * 80)
-
-    // console.log (finalPrice)
-
-    // console.log (finalPrice.toFixed(2))
-
-    document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
-    per gli under 18 è previsto uno sconto del 20%. <br>
-    prezzo finale del biglietto: ${finalPrice.toFixed(2)}
-    `)
-
-} else if (age < 65) {
-
-    finalPrice = firstPrice
-
-    // console.log (finalPrice)
-
-    // console.log (finalPrice.toFixed(2))
-
-    document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
-    per gli under 65 non è previsto uno sconto. <br>
-    prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
-    `)
-
-} else {
-
-    finalPrice = ((firstPrice / 100) * 60)
-
-    // consolelog (finalPrice)
-
-    // console.log (finalPrice.toFixed(2))
+if (isNaN(km) || isNaN(age)) {
     
-    document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
-    per gli over 65 è previsto uno sconto pari al 40%. <br>
-    prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
-    `)
-}
+    alert("inserimento non corretto, ricaricare la pagina")
+
+} else {if (age < 18) {
+
+        finalPrice = ((firstPrice / 100) * 80)
+
+        // console.log (finalPrice)
+
+        // console.log (finalPrice.toFixed(2))
+
+        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        per gli under 18 è previsto uno sconto del 20%. <br>
+        prezzo finale del biglietto: ${finalPrice.toFixed(2)}
+        `)
+
+        } else if (age < 65) {
+
+        finalPrice = firstPrice
+
+        // console.log (finalPrice)
+
+        // console.log (finalPrice.toFixed(2))
+
+        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        per gli under 65 non è previsto uno sconto. <br>
+        prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
+        `)
+
+        } else {
+
+        finalPrice = ((firstPrice / 100) * 60)
+
+        // consolelog (finalPrice)
+
+        // console.log (finalPrice.toFixed(2))
+    
+        document.writeln(`prezzo intero del biglietto: ${firstPrice.toFixed(2)}. <br>
+        per gli over 65 è previsto uno sconto pari al 40%. <br>
+        prezzo finale del biglietto: ${finalPrice.toFixed(2)}.
+        `)
+        }
+    }
